@@ -24,7 +24,7 @@ import Header from "../components/Header";
     // console.log(params);
        store.fetchData(params.id);
        store.resetData();
-  }, []);
+  },[]);
 
   // console.log("store data",store.data);
 

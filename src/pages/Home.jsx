@@ -15,7 +15,7 @@ function Home(){
     // console.log(store);
     React.useEffect(() =>{
         if(store.trendingCoin.length===0 && store.searched===false)store.fetchCoins();
-    },[])
+})
 
     console.log("trending coins",store.coins);
 
@@ -30,7 +30,7 @@ function Home(){
                     store.coins.map(coin=>{
                         return(
                             <div className="flex flex-row item-center justify-between w-96 mb-6 shadow-md p-4">
-                            <img className="w-8" src={coin.image}></img>
+                            <img alt="coin-logo" className="w-8" src={coin.image}></img>
                             <div key={coin.id}>
                                 <Link to={`/${coin.id}`}>
                                     {coin.name}
@@ -38,7 +38,7 @@ function Home(){
                             </div>
                             <div>{(!store.searched)?
                                 <div className="flex flex-row items-center">
-                                <img className="w-4 h-4 mr-2" src="https://cryptologos.cc/logos/bitcoin-btc-logo.png?v=023"
+                                <img  className="w-4 h-4 mr-2" src="https://cryptologos.cc/logos/bitcoin-btc-logo.png?v=023"
                                     alt="btc-logo"/>
                                 <h3>{(coin.pricBtc).toFixed(8)} BTC</h3>
                                 </div>:""}
