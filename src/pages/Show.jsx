@@ -1,4 +1,5 @@
 import React from "react";
+import '../App.css'
 import showStore from "../store/showStore";
 import { useParams } from "react-router-dom";
 import {
